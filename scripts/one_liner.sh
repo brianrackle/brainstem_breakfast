@@ -2,7 +2,7 @@
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 lldb-3.5
+sudo apt-get install -y g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 lldb-3.5 zram-config
 sudo mkdir repos
 
 #DISCARD START REPLACE WITH apt-get install clang-3.5 lldb-3.5
