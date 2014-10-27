@@ -14,6 +14,7 @@ cd llvm_src
 sudo svn co http://llvm.org/svn/llvm-project/llvm/branches/release_35/ llvm
 cd llvm/tools
 #replace with https://www.python.org/ftp/python/3.4.2/Python-3.4.2.tar.xz + swig + rest
+#see http://lldb.llvm.org/build.html
 sudo apt-get build-dep lldb-3.5
 sudo svn co http://llvm.org/svn/llvm-project/cfe/branches/release_35/ clang
 sudo svn co http://llvm.org/svn/llvm-project/lldb/branches/release_35/ lldb
