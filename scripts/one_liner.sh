@@ -2,8 +2,10 @@
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 zram-config
+sudo apt-get install -y build-essential g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 zram-config
 sudo mkdir repos
+
+##Pull Python and Build
 
 ## Pull Clang and LLVM
 cd ~/repos/
@@ -11,6 +13,8 @@ sudo mkdir llvm_src
 cd llvm_src
 sudo svn co http://llvm.org/svn/llvm-project/llvm/branches/release_35/ llvm
 cd llvm/tools
+#replace with https://www.python.org/ftp/python/3.4.2/Python-3.4.2.tar.xz + swig + rest
+sudo apt-get build-dep lldb-3.5
 sudo svn co http://llvm.org/svn/llvm-project/cfe/branches/release_35/ clang
 sudo svn co http://llvm.org/svn/llvm-project/lldb/branches/release_35/ lldb
 
