@@ -35,6 +35,10 @@ sudo CC=clang CXX=clang++ cmake -G "Unix Makefiles" -DLIBCXX_CXX_ABI=libsupc++ -
 sudo make -j 4
 sudo make install
 
+#.bashrc
+#export CC=clang
+#export CXX=clang++
+
 ## Setup Emacs
 xdg-mime default emacs.desktop text/plain
 
