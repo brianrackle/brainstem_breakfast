@@ -10,7 +10,7 @@ sudo apt-get curl
 curl -sSL https://get.docker.com/ubuntu/ | sudo sh
 sudo docker run -i -t ubuntu /bin/bash
 
-##Pull Python and Build
+#move to https://github.com/rsmmr/install-clang
 
 ## Pull Clang and LLVM
 cd ~/repos/
