@@ -5,6 +5,11 @@ sudo apt-get upgrade -y
 sudo apt-get install -y build-essential g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 zram-config
 sudo mkdir repos
 
+#get docker
+sudo apt-get curl
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+sudo docker run -i -t ubuntu /bin/bash
+
 ##Pull Python and Build
 
 ## Pull Clang and LLVM
