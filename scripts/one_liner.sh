@@ -2,43 +2,17 @@
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y build-essential g++ subversion cmake emacs git xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 zram-config
+sudo apt-get install -y subversion  emacs  xdg-utils htop ncurses-dev ruby ruby-dev nodejs make default-jre default-jdk ack-grep gnuplot-x11 zram-config
 sudo mkdir repos
 
-#get docker
-sudo apt-get curl
-curl -sSL https://get.docker.com/ubuntu/ | sudo sh
-sudo docker run -i -t ubuntu /bin/bash
-
-#move to https://github.com/rsmmr/install-clang
-
-## Pull Clang and LLVM
+##install-clang
+sudo apt-get install -y curl g++ cmake git
 cd ~/repos/
-sudo mkdir llvm_src
-cd llvm_src
-sudo svn co http://llvm.org/svn/llvm-project/llvm/branches/release_35/ llvm
-cd llvm/tools
-sudo apt-get build-dep lldb-3.5
-sudo svn co http://llvm.org/svn/llvm-project/cfe/branches/release_35/ clang
-sudo svn co http://llvm.org/svn/llvm-project/lldb/branches/release_35/ lldb
-
-## Build Clang and LLVM
-cd ~/repos/llvm_src
-sudo mkdir build_llvm
-cd build_llvm
-sudo ../llvm/configure --enable-optimized --enable-targets=host --disable-compiler-version-checks
-sudo make -j 4
-sudo make install
-#DISCARD END
-
-## Pull and Make libc++
-cd ~/repos/llvm_src
-sudo svn co http://llvm.org/svn/llvm-project/libcxx/trunk libcxx
-sudo mkdir build_libcxx
-cd build_libcxx
-sudo CC=clang CXX=clang++ cmake -G "Unix Makefiles" -DLIBCXX_CXX_ABI=libsupc++ -DLIBCXX_LIBSUPCXX_INCLUDE_PATHS="/usr/include/c++/4.8;/usr/include/x86_64-linux-gnu/c++/4.8" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr $HOME/repos/llvm_src/libcxx
-sudo make -j 4
-sudo make install
+sudo git clone https://github.com/rsmmr/install-clang.git
+cd /install-clang
+sudo chmod -x install-clang
+sudo ./install-clang -j 2 /opt/llvm
+#curl -sSLO https://cdn.rawgit.com/rsmmr/install-clang/master/install-clang#L6 | sudo sh -j 2 /opt/llvm
 
 #.bashrc
 #export CC=clang
