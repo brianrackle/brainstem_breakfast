@@ -10,7 +10,7 @@ sudo apt-get install -y curl g++ cmake git
 cd ~/repos/
 sudo git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
-sudo chmod -x install-clang
+sudo chmod 744 install-clang
 sudo ./install-clang -j 2 /opt/llvm
 #curl -sSLO https://cdn.rawgit.com/rsmmr/install-clang/master/install-clang#L6 | sudo sh -j 2 /opt/llvm
 
