@@ -1,21 +1,21 @@
 
 ## Initialize Environment
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install -y build-essential module-assistant subversion  emacs  xdg-utils htop ncurses-dev make default-jre default-jdk ack-grep gnuplot-x11 zram-config
+apt-get update -y
+apt-get upgrade -y
+apt-get install -y build-essential module-assistant subversion  emacs  xdg-utils htop ncurses-dev make default-jre default-jdk ack-grep gnuplot-x11 zram-config
 m-a prepare
-sudo mkdir repos
+mkdir repos
 
 ##VirtualBox GuestAdditions
 bash /media/cdrom/VBoxLinuxAdditions.run
 
 ##install-clang
-sudo apt-get install -y curl g++ cmake git
+apt-get install -y curl g++ cmake git
 cd ~/repos/
-sudo git clone https://github.com/rsmmr/install-clang.git
+git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
-sudo chmod 744 install-clang
-sudo ./install-clang -j 2 /opt/llvm
+chmod 744 install-clang
+./install-clang -j 2 /opt/llvm
 printf "export PATH=/opt/llvm/bin:$PATH" >> ~/.bashrc
 printf "export CC=clang" >> ~/.bashrc
 printf "export CCX=clang++" >> ~/.bashrc
@@ -26,13 +26,13 @@ xdg-mime default emacs.desktop text/plain
 
 ## Clone BSB
 cd ~/repos/
-sudo git clone https://github.com/brianrackle/brainstem_breakfast.git
+git clone https://github.com/brianrackle/brainstem_breakfast.git
 cd brainstem_breakfast/source
-sudo clang++ --std=c++14 --stdlib=libc++ main.cpp
+clang++ --std=c++14 --stdlib=libc++ main.cpp
 
 ## Install Jekyll
-sudo apt-get install -y ruby ruby-dev nodejs
-sudo gem install jekyll --no-rdoc --no-ri
+apt-get install -y ruby ruby-dev nodejs
+gem install jekyll --no-rdoc --no-ri
 
 ## Install Graphics Drivers
 ## From Ctrl-Alt-F1 with 
