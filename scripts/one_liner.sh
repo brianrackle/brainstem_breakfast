@@ -2,7 +2,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant subversion emacs xdg-utils htop ncurses-dev make ack-grep gnuplot-x11 zram-config
+apt-get install -y build-essential module-assistant subversion emacs xdg-utils htop ncurses-dev make ack-grep gnuplot-x11
 m-a prepare
 mkdir repos
 
