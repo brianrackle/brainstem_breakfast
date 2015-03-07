@@ -2,8 +2,12 @@
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y subversion  emacs  xdg-utils htop ncurses-dev make default-jre default-jdk ack-grep gnuplot-x11 zram-config
+sudo apt-get install -y build-essential module-assistant subversion  emacs  xdg-utils htop ncurses-dev make default-jre default-jdk ack-grep gnuplot-x11 zram-config
+m-a prepare
 sudo mkdir repos
+
+##VirtualBox GuestAdditions
+bash /media/cdrom/VBoxLinuxAdditions.run
 
 ##install-clang
 sudo apt-get install -y curl g++ cmake git
