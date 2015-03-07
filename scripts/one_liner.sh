@@ -2,7 +2,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant subversion emacs xdg-utils htop ncurses-dev make ack-grep gnuplot-x11
+apt-get install -y build-essential module-assistant subversion emacs xdg-utils htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git
 m-a prepare
 mkdir repos
 
@@ -10,7 +10,7 @@ mkdir repos
 bash /media/cdrom/VBoxLinuxAdditions.run
 
 ##install-clang
-apt-get install -y curl g++ cmake git
+apt-get install -y 
 cd ~/repos/
 git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
