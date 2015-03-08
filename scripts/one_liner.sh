@@ -2,7 +2,8 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant subversion emacs xdg-utils htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git
+apt-get install -y build-essential module-assistant xfce4 terminator subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git
+##find prefered login manager
 
 ##VirtualBox GuestAdditions
 m-a prepare
