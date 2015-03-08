@@ -11,12 +11,18 @@ bash /media/cdrom/VBoxLinuxAdditions.run
 
 mkdir repos
 
+cd ~/repos/
+##install node
+curl http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz | sh tar -zxf
+cd node-v0.12.0
+./configure --prefix=/opt/node && make -j 4 && sudo make install
+
 ##install-clang
 cd ~/repos/
 git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
 chmod 744 install-clang
-./install-clang -j 2 /opt/llvm
+./install-clang -j 4 /opt/llvm
 printf "export PATH=/opt/llvm/bin:$PATH" >> ~/.bashrc
 printf "export CC=clang" >> ~/.bashrc
 printf "export CCX=clang++" >> ~/.bashrc
