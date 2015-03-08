@@ -12,7 +12,6 @@ bash /media/cdrom/VBoxLinuxAdditions.run
 mkdir repos
 
 ##install-clang
-apt-get install -y 
 cd ~/repos/
 git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
