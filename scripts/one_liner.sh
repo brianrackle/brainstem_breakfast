@@ -23,9 +23,6 @@ printf "export CC=clang" >> ~/.bashrc
 printf "export CCX=clang++" >> ~/.bashrc
 #curl -sSLO https://cdn.rawgit.com/rsmmr/install-clang/master/install-clang#L6 | sudo sh -j 2 /opt/llvm
 
-## Setup Emacs
-xdg-mime default emacs.desktop text/plain
-
 ## Clone BSB
 cd ~/repos/
 git clone https://github.com/brianrackle/brainstem_breakfast.git
