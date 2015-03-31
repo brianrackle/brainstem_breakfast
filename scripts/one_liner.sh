@@ -3,7 +3,7 @@
 su root
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y xfce4 build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git sudo
+apt-get install -y xfce4 terminator iceweasel build-essential module-assistant  subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git sudo
 
 adduser brian sudo
 reboot
