@@ -40,6 +40,8 @@ cd brainstem_breakfast/source
 clang++ --std=c++14 --stdlib=libc++ main.cpp
 
 ## Install Jekyll
+sudo curl -sL https://deb.nodesource.com/setup | sudo bash -
+
 apt-get install -y ruby ruby-dev nodejs
 gem install jekyll --no-rdoc --no-ri
 
