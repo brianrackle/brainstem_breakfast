@@ -1,24 +1,20 @@
 ##find prefered login manager
 ## Initialize Environment
-su root
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y xfce4 terminator iceweasel build-essential module-assistant  subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git sudo
-
-adduser brian sudo
-reboot
+apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git
 
 ##VirtualBox GuestAdditions
 m-a prepare
-bash /media/cdrom/VBoxLinuxAdditions.run
+bash ./media/cdrom/VBoxLinuxAdditions.run
 
 mkdir repos
 
-cd ~/repos/
+#cd ~/repos/
 ##install node
-curl http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz | sh tar -zxf
-cd node-v0.12.0
-./configure --prefix=/opt/node && make -j 4 && sudo make install
+#curl http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz | sh tar -zxf
+#cd node-v0.12.0
+#./configure --prefix=/opt/node && make -j 4 && sudo make install
 ##add to /etc/profile /opt/node/bin
 
 ##install-clang
@@ -26,6 +22,7 @@ cd ~/repos/
 git clone https://github.com/rsmmr/install-clang.git
 cd install-clang/
 chmod 744 install-clang
+
 ./install-clang -j 4 /opt/llvm
 ##add to /etc/profile /opt/llvm/bin
 
