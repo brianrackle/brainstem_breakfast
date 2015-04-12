@@ -2,7 +2,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git clang-3.6 lldb-3.6 libboost-all-dev
+apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot-x11 curl g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev
 
 ##VirtualBox GuestAdditions
 m-a prepare
