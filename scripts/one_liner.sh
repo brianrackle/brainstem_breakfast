@@ -16,13 +16,21 @@ printf "export CCX=clang++" >> ~/.bashrc
 ## Clone BSB
 mkdir repos
 cd ~/repos/
+
 git clone https://github.com/brianrackle/brainstem_breakfast.git
-cd brainstem_breakfast/source
-clang++ --std=c++14 --stdlib=libc++ main.cpp
+git clone https://github.com/brianrackle/step_plot.git
+
+git clone https://github.com/gabime/spdlog.git
+git clone https://github.com/cppformat/cppformat.git
+
+#cd brainstem_breakfast/source
+#clang++ --std=c++14 --stdlib=libc++ main.cpp
 
 ## Install Jekyll
 apt-get install -y ruby ruby-dev nodejs
 gem install jekyll --no-rdoc --no-ri
+
+
 
 #cd ~/repos/
 ##install node
