@@ -22,6 +22,7 @@ git clone https://github.com/brianrackle/step_plot.git
 
 git clone https://github.com/gabime/spdlog.git
 git clone https://github.com/cppformat/cppformat.git
+https://github.com/USCiLab/cereal.git
 
 #cd brainstem_breakfast/source
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
