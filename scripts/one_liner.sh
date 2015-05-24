@@ -2,7 +2,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev
+apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
 
 ##VirtualBox GuestAdditions
 m-a prepare
@@ -23,6 +23,7 @@ git clone https://github.com/brianrackle/step_plot.git
 git clone https://github.com/gabime/spdlog.git
 git clone https://github.com/cppformat/cppformat.git
 git clone https://github.com/USCiLab/cereal.git
+git clone https://github.com/google/gumbo-parser.git
 
 #cd brainstem_breakfast/source
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
