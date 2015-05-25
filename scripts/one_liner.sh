@@ -8,6 +8,12 @@ apt-get install -y build-essential module-assistant terminator subversion emacs 
 m-a prepare
 bash ./media/cdrom/VBoxLinuxAdditions.run
 
+#install codelite
+apt-key adv --fetch-keys http://repos.codelite.org/CodeLite.asc
+apt-add-repository 'deb http://repos.codelite.org/ubuntu/ vivid universe'
+apt-get update
+apt-get install codelite wxcrafter
+
 printf "alias clang='clang-3.6'" >> ~/.bash_aliases
 printf "alias clang++='clang++-3.6'" >> ~/.bash_aliases
 printf "export CC=clang" >> ~/.bashrc
