@@ -1,4 +1,3 @@
-##find prefered login manager
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
@@ -8,18 +7,19 @@ apt-get install -y build-essential module-assistant terminator subversion emacs 
 m-a prepare
 bash ./media/cdrom/VBoxLinuxAdditions.run
 
+#setup clang
+printf "alias clang='clang-3.6'" >> ~/.bash_aliases
+printf "alias clang++='clang++-3.6'" >> ~/.bash_aliases
+printf "export CC=clang" >> ~/.bashrc
+printf "export CCX=clang++" >> ~/.bashrc
+
 #install codelite
 apt-key adv --fetch-keys http://repos.codelite.org/CodeLite.asc
 apt-add-repository 'deb http://repos.codelite.org/ubuntu/ vivid universe'
 apt-get update
 apt-get install codelite wxcrafter
 
-printf "alias clang='clang-3.6'" >> ~/.bash_aliases
-printf "alias clang++='clang++-3.6'" >> ~/.bash_aliases
-printf "export CC=clang" >> ~/.bashrc
-printf "export CCX=clang++" >> ~/.bashrc
-
-## Clone BSB
+##clone repos
 mkdir repos
 cd ~/repos/
 
@@ -37,8 +37,6 @@ git clone https://github.com/google/gumbo-parser.git
 ## Install Jekyll
 apt-get install -y ruby ruby-dev nodejs
 gem install jekyll --no-rdoc --no-ri
-
-
 
 #cd ~/repos/
 ##install node
