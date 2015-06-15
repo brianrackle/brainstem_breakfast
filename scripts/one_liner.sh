@@ -1,7 +1,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y xrdp terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
+apt-get install -y xrdp terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
 
 ##Hyper-V
 #http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/01/09/using-hyper-v-with-a-wireless-network-adapter.aspx
