@@ -1,11 +1,29 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y build-essential module-assistant terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
+apt-get install -y xrdp terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git clang-3.6 lldb-3.6 clang-format-3.6 libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
+
+##Hyper-V
+#http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/01/09/using-hyper-v-with-a-wireless-network-adapter.aspx
+#sudo apt-get install linux-image-extra-virtual
+#Set GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080" in /etc/default/grub.
+#Update grub: sudo update-grub
 
 ##VirtualBox GuestAdditions
-m-a prepare
-bash ./media/cdrom/VBoxLinuxAdditions.run
+#m-a prepare
+#bash ./media/cdrom/VBoxLinuxAdditions.run
+
+sudo service xrdp start
+#ifconfig inet: xxx.xxx.xxx.xxx 
+
+##install-clang
+cd ~/repos/
+git clone https://github.com/rsmmr/install-clang.git
+cd install-clang/
+chmod 744 install-clang
+
+./install-clang -j 4 /opt/llvm
+#add to /etc/profile /opt/llvm/bin
 
 #setup clang
 printf "alias clang='clang-3.6'" >> ~/.bash_aliases
@@ -44,15 +62,6 @@ gem install jekyll --no-rdoc --no-ri
 #cd node-v0.12.0
 #./configure --prefix=/opt/node && make -j 4 && sudo make install
 ##add to /etc/profile /opt/node/bin
-
-##install-clang
-#cd ~/repos/
-#git clone https://github.com/rsmmr/install-clang.git
-#cd install-clang/
-#chmod 744 install-clang
-
-#./install-clang -j 4 /opt/llvm
-##add to /etc/profile /opt/llvm/bin
 
 ## Install Graphics Drivers
 ## From Ctrl-Alt-F1 with 
