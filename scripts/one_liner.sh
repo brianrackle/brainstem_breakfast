@@ -23,7 +23,14 @@ cd install-clang/
 chmod 744 install-clang
 
 ./install-clang -j 4 /opt/llvm
-#add to /etc/profile /opt/llvm/bin
+
+#create new file under /etc/profile.d/
+#sudo vi /etc/profile.d/SCRIPT_NAME.sh
+#add there: /opt/llvm/bin
+#export PATH=YOUR_PATH_WITHOUT_TRAILING_SLASH:$PATH
+#and give right on executable
+#sudo chmod a+x /etc/profile.d/SCRIPT_NAME.sh
+
 
 #setup clang
 printf "alias clang='clang-3.6'" >> ~/.bash_aliases
