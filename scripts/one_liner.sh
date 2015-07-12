@@ -1,60 +1,27 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y xrdp terminator subversion emacs htop ncurses-dev make ack-grep gnuplot5 g++ cmake git libboost-all-dev curl libcurl4-openssl-dev libxml2 libxml2-dev automake
-
-##Hyper-V
-#http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/01/09/using-hyper-v-with-a-wireless-network-adapter.aspx
-#sudo apt-get install linux-image-extra-virtual
-#Set GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080" in /etc/default/grub.
-#Update grub: sudo update-grub
-
-##VirtualBox GuestAdditions
-#m-a prepare
-#bash ./media/cdrom/VBoxLinuxAdditions.run
-
-sudo service xrdp start
-#ifconfig inet: xxx.xxx.xxx.xxx 
+apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake
 
 ##install-clang
-cd ~/repos/
-git clone https://github.com/rsmmr/install-clang.git
-cd install-clang/
-chmod 744 install-clang
+#cd ~/repos/
+#git clone https://github.com/rsmmr/install-clang.git
+#cd install-clang/
+#chmod 744 install-clang
 
-./install-clang -j 4 /opt/llvm
-
-#create new file under /etc/profile.d/
-#sudo vi /etc/profile.d/SCRIPT_NAME.sh
-#add there: /opt/llvm/bin
-#export PATH=YOUR_PATH_WITHOUT_TRAILING_SLASH:$PATH
-#and give right on executable
-#sudo chmod a+x /etc/profile.d/SCRIPT_NAME.sh
-
-
-#setup clang
-printf "alias clang='clang-3.6'" >> ~/.bash_aliases
-printf "alias clang++='clang++-3.6'" >> ~/.bash_aliases
-printf "export CC=clang" >> ~/.bashrc
-printf "export CCX=clang++" >> ~/.bashrc
-
-#install codelite
-apt-key adv --fetch-keys http://repos.codelite.org/CodeLite.asc
-apt-add-repository 'deb http://repos.codelite.org/ubuntu/ vivid universe'
-apt-get update
-apt-get install codelite wxcrafter
+#./install-clang -j 4 /opt/llvm
 
 ##clone repos
 mkdir repos
 cd ~/repos/
 
 git clone https://github.com/brianrackle/brainstem_breakfast.git
-git clone https://github.com/brianrackle/step_plot.git
+#git clone https://github.com/brianrackle/step_plot.git
 
-git clone https://github.com/gabime/spdlog.git
-git clone https://github.com/cppformat/cppformat.git
-git clone https://github.com/USCiLab/cereal.git
-git clone https://github.com/google/gumbo-parser.git
+#git clone https://github.com/gabime/spdlog.git
+#git clone https://github.com/cppformat/cppformat.git
+#git clone https://github.com/USCiLab/cereal.git
+#git clone https://github.com/google/gumbo-parser.git
 
 #cd brainstem_breakfast/source
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
