@@ -1,7 +1,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake
+apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip
 
 ##install-clang
 #cd ~/repos/
