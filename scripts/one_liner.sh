@@ -3,6 +3,8 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip open-vm-tools open-vm-tools-desktop
 
+mount -t vmhgfs .host:/ /home/brian/shares
+
 ##install-clang
 #cd ~/repos/
 #git clone https://github.com/rsmmr/install-clang.git
