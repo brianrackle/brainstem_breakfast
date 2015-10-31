@@ -1,14 +1,31 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip open-vm-tools open-vm-tools-desktop
+apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip nodejs-legacy open-vm-tools open-vm-tools-desktop
 
 mount -t vmhgfs .host:/ /home/brian/shares
 
-cd Downloads
+#atom
+cd ~/Downloads/
 wget https://atom.io/download/deb atom.deb
 sudo dpkg -i atom.deb
 sudo apt-get install -f
+
+#erlang
+cd ~/Downloads/
+wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~ubuntu~vivid_amd64.deb erlang.deb
+sudo dpkg -i erlang.deb
+sudo apt-get install -f
+
+#elixir
+cd ~/Downloads/
+wget http://packages.erlang-solutions.com/site/esl/elixir/FLAVOUR_2_download/elixir_1.1.1-1~ubuntu~vivid_amd64.deb elixir.deb
+sudo dpkg -i elixir.deb
+sudo apt-get install -f
+mix local.hex
+
+#phoenix
+mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
 
 ##clone repos
 mkdir repos
