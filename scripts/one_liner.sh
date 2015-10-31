@@ -5,13 +5,7 @@ apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ c
 
 mount -t vmhgfs .host:/ /home/brian/shares
 
-##install-clang
-#cd ~/repos/
-#git clone https://github.com/rsmmr/install-clang.git
-#cd install-clang/
-#chmod 744 install-clang
-
-#./install-clang -j 4 /opt/llvm
+#download https://atom.io/download/deb
 
 ##clone repos
 mkdir repos
