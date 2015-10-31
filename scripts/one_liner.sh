@@ -5,7 +5,10 @@ apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ c
 
 mount -t vmhgfs .host:/ /home/brian/shares
 
-#download https://atom.io/download/deb
+cd Downloads
+wget https://atom.io/download/deb atom.deb
+sudo dpkg -i atom.deb
+sudo apt-get install -f
 
 ##clone repos
 mkdir repos
