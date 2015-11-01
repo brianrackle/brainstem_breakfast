@@ -27,6 +27,11 @@ mix local.hex
 #phoenix
 mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
 
+#postgres
+apt-get install postgresql-9.4
+sudo -u postgres psql postgres
+\password postgres
+
 ##clone repos
 mkdir repos
 cd ~/repos/
