@@ -1,7 +1,7 @@
 ## Initialize Environment
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip nodejs-legacy open-vm-tools open-vm-tools-desktop
+apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
 
 mount -t vmhgfs .host:/ /home/brian/shares
 
