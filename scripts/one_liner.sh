@@ -1,14 +1,20 @@
 ## Initialize Environment
-apt-get update -y
-apt-get upgrade -y
-apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
 
-mount -t vmhgfs .host:/ /home/brian/shares
+sudo mount -t vmhgfs .host:/ /home/brian/shares
 
 #atom
 cd ~/Downloads/
 wget https://atom.io/download/deb atom.deb
 sudo dpkg -i atom.deb
+sudo apt-get install -f
+
+#dropbox
+cd ~/Downloads/
+wget https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb dropbox.deb
+sudo dpkg -i dropbox.deb
 sudo apt-get install -f
 
 #erlang
@@ -28,7 +34,7 @@ mix local.hex
 mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
 
 #postgres
-apt-get install postgresql-9.4
+sudo apt-get install postgresql-9.4
 sudo -u postgres psql postgres
 \password postgres
 
@@ -48,7 +54,7 @@ git clone https://github.com/brianrackle/brainstem_breakfast.git
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
 
 ## Install Jekyll
-apt-get install -y ruby ruby-dev nodejs
+sudo apt-get install -y ruby ruby-dev nodejs
 gem install jekyll --no-rdoc --no-ri
 
 #cd ~/repos/
