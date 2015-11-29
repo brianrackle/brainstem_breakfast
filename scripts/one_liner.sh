@@ -11,12 +11,6 @@ wget https://atom.io/download/deb atom.deb
 sudo dpkg -i atom.deb
 sudo apt-get install -f
 
-#dropbox
-cd ~/Downloads/
-wget https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb dropbox.deb
-sudo dpkg -i dropbox.deb
-sudo apt-get install -f
-
 #erlang
 cd ~/Downloads/
 wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~ubuntu~vivid_amd64.deb erlang.deb
