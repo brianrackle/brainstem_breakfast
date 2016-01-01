@@ -5,6 +5,9 @@ sudo apt-get install -y terminator subversion emacs htop make ack-grep gnuplot5 
 
 sudo mount -t vmhgfs .host:/ /home/brian/shares
 
+#json resume
+sudo npm install -g resume-cli
+
 #atom
 cd ~/Downloads/
 wget https://atom.io/download/deb atom.deb
@@ -48,7 +51,7 @@ git clone https://github.com/brianrackle/brainstem_breakfast.git
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
 
 ## Install Jekyll
-sudo apt-get install -y ruby ruby-dev nodejs
+sudo apt-get install -y ruby ruby-dev
 gem install jekyll --no-rdoc --no-ri
 
 #cd ~/repos/
