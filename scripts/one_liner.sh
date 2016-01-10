@@ -14,17 +14,10 @@ wget https://atom.io/download/deb atom.deb
 sudo dpkg -i atom.deb
 sudo apt-get install -f
 
-#erlang
-cd ~/Downloads/
-wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~ubuntu~vivid_amd64.deb erlang.deb
-sudo dpkg -i erlang.deb
-sudo apt-get install -f
-
-#elixir
-cd ~/Downloads/
-wget http://packages.erlang-solutions.com/site/esl/elixir/FLAVOUR_2_download/elixir_1.1.1-1~ubuntu~vivid_amd64.deb elixir.deb
-sudo dpkg -i elixir.deb
-sudo apt-get install -f
+#erlang + elixir
+wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+sudo dpkg -i erlang-solutions_1.0_all.deb
+sudo apt-get install esl-erlang elixir
 mix local.hex
 
 #phoenix
