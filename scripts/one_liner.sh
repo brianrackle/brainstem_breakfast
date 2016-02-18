@@ -29,12 +29,14 @@ sudo -u postgres psql postgres
 \password postgres
 
 #elasticsearch
+#https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04
 sudo apt-get install openjdk-8-jre-headless
 wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.2.0/elasticsearch-2.2.0.deb
 sudo dpkg -i elasticsearch-2.2.0.deb
 sudo update-rc.d elasticsearch defaults 95 10
 ### In order to start elasticsearch, execute
 #sudo /etc/init.d/elasticsearch start
+
  
 ##clone repos
 mkdir repos
