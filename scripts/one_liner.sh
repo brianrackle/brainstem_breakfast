@@ -31,7 +31,7 @@ sudo -u postgres psql postgres
 #elasticsearch
 sudo apt-get install openjdk-8-jre-headless
 wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.2.0/elasticsearch-2.2.0.deb
-
+sudo dpkg -i elasticsearch-2.2.0.deb
 
 ##clone repos
 mkdir repos
