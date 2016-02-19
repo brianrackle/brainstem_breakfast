@@ -1,3 +1,6 @@
+#check ubuntu version
+uname -a && lsb_release -a
+
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
