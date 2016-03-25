@@ -11,6 +11,11 @@ sudo mount -t vmhgfs .host:/ /home/brian/shares
 #json resume
 sudo npm install -g resume-cli
 
+#emacs 24.4
+cd ~/Downloads/
+wget https://gist.githubusercontent.com/tnarihi/6054dfa7b4ad2564819b/raw/42d6b6e7e22e4189c917c9cd14aaba64a1553404/ubuntu14.04-emacs-24.4-install.sh
+bash ubuntu14.04-emacs-24.4-install.sh
+
 #atom
 cd ~/Downloads/
 wget https://atom.io/download/deb atom.deb
