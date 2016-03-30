@@ -6,11 +6,6 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
 
-#git clone https://github.com/rasa/vmware-tools-patches.git
-#cd vmware-tools-patches/
-#sudo ./patched-open-vm-tools.sh 
-
-#sudo mount -t vmhgfs .host:/ /home/brian/shares
 sudo apt-get install samba cifs-utils
 echo "//hostname/c  /home/brian/shares  cifs  username=******,password=*****,iocharset=utf8,sec=ntlm  0  0" | sudo tee -a /etc/fstab
 sudo mount -a
