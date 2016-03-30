@@ -12,7 +12,6 @@ sudo apt-get install -y  update-manager terminator subversion emacs htop make ac
 
 #sudo mount -t vmhgfs .host:/ /home/brian/shares
 sudo apt-get install samba cifs-utils
-    cifs  guest,uid=1000,iocharset=utf8  0  0
 echo "//hostname/c  /home/brian/shares  cifs  username=******,password=*****,iocharset=utf8,sec=ntlm  0  0" | sudo tee -a /etc/fstab
 sudo mount -a
 
