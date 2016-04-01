@@ -7,7 +7,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
 
 sudo apt-get install samba cifs-utils
-echo "//machine/c  /home/brian/share/c  cifs rw,user,auto,_netdev,uid=brian,username=*****,password=******,dom=******,iocharset=utf8,sec=ntlm  0  0" | sudo tee -a /etc/fstab
+echo "//machine/c  /home/*****/share/c  cifs rw,user,auto,_netdev,uid=*****,username=*****,password=******,dom=******,iocharset=utf8,sec=ntlm  0  0" | sudo tee -a /etc/fstab
 sudo mount -a
 
 #json resume
