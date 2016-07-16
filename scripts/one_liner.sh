@@ -42,7 +42,6 @@ sudo update-rc.d elasticsearch defaults 95 10
 ### In order to start elasticsearch, execute
 #sudo /etc/init.d/elasticsearch start
 
- 
 ##clone repos
 mkdir repos
 cd ~/repos/
@@ -57,10 +56,6 @@ git clone https://github.com/brianrackle/brainstem_breakfast.git
 
 #cd brainstem_breakfast/source
 #clang++ --std=c++14 --stdlib=libc++ main.cpp
-
-## Install Jekyll
-sudo apt-get install -y ruby ruby-dev
-gem install jekyll --no-rdoc --no-ri
 
 #cd ~/repos/
 ##install node
