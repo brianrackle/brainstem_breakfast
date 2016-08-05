@@ -33,6 +33,11 @@ sudo apt-get install postgresql-9.4
 sudo -u postgres psql postgres
 \password postgres
 
+#golang
+#add to .profile
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/work
+
 #elasticsearch
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04
 sudo apt-get install openjdk-8-jre-headless
