@@ -7,6 +7,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
 
 vmhgfs-fuse ~/share
+.host:/C /mnt/share/C fuse.vmhgfs-fuse allow_other,uid=1000,gid=1000,auto_unmount,defaults 0 0
 
 #sudo apt-get install samba cifs-utils
 #echo "//machine/c  /home/*****/share/c  cifs rw,user,auto,_netdev,uid=*****,username=*****,password=******,dom=******,iocharset=utf8,sec=ntlm  0  0" | sudo tee -a /etc/fstab
