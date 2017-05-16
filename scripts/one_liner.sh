@@ -4,7 +4,7 @@ uname -a && lsb_release -a
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3 python3-pip nodejs-legacy npm open-vm-tools open-vm-tools-desktop
+sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3-pip open-vm-tools open-vm-tools-desktop
 #postgres
 sudo apt-get install postgresql-9.4
 sudo -u postgres psql postgres
