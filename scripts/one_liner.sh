@@ -4,7 +4,7 @@ uname -a && lsb_release -a
 ## Initialize Environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y  update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3-pip open-vm-tools open-vm-tools-desktop
+sudo apt-get install -y python3-dev libffi-dev libssl-dev update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3-pip open-vm-tools open-vm-tools-desktop
 
 #python3.6.1
 wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
