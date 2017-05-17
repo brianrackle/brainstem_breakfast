@@ -10,7 +10,7 @@ sudo apt-get install -y python3-dev libffi-dev libssl-dev update-manager termina
 wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
 tar xf Python-3.6.1.tar.xz
 cd Python-3.6.1
-./configure --prefix=/usr/local --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib" --enable-optimizations
+./configure --enable-optimizations
 make
 sudo make altinstall
 
