@@ -2,18 +2,16 @@
 uname -a && lsb_release -a
 
 ## Initialize Environment
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install -y python3-dev libffi-dev libssl-dev update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3-pip open-vm-tools open-vm-tools-desktop
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y npm python3-dev libffi-dev libssl-dev update-manager terminator subversion emacs htop make ack-grep g++ cmake git curl automake python3-pip open-vm-tools open-vm-tools-desktop
 
 #virtualenv
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip3 install virtualenv
 
-wget https://nodejs.org/dist/v8.9.1/node-v8.9.1-x64.msi
-tar xvjf node-v8.9.1-x64.msi node
-sudo ln -sf ~/node/bin/node /usr/bin/node
-sudo ln -sf ~/node/bin/node /usr/bin/nodejs
+sudo npm install n --global
+sudo n 9.2.0
 
 #python3.6.1
 wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
