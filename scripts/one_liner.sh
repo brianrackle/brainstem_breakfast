@@ -10,8 +10,9 @@ sudo apt install -y npm python3-dev libffi-dev libssl-dev update-manager termina
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip3 install virtualenv
 
-sudo npm install n --global
-sudo n latest
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+npm install n --global
+n latest
 
 #python3.6.1
 wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
