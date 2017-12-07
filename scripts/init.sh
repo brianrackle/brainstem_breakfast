@@ -1,4 +1,9 @@
 #! /bin/bash
+
+## wget https://rawgit.com/brianrackle/brainstem_breakfast/master/scripts/init.sh
+## chmod +x init.sh
+## ./init.sh
+
 read -s -p "password: " sudoPW
 echo $sudoPW | sudo -S yum update
 
