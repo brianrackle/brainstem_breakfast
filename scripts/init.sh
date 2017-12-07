@@ -1,3 +1,4 @@
+#! /bin/bash
 read -s -p "password: " sudoPW
 echo $sudoPW | sudo -S yum update
 
