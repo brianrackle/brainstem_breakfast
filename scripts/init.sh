@@ -15,6 +15,10 @@ echo $sudoPW | sudo -S apt install -y npm python3-dev libffi-dev libssl-dev upda
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip3 install virtualenv
 
-echo $sudoPW | sudo -S chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
+source ~/.profile
+
 npm install n --global
 n latest
