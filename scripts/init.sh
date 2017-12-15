@@ -19,4 +19,4 @@ export PATH=~/.npm-global/bin:$PATH
 source ~/.profile
 
 npm install n --global
-n latest
+sudo n latest
