@@ -15,3 +15,9 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | 
 #virtualenv
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip3 install virtualenv
+
+#go
+wget https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+mkdir go
+mkdir go/src
