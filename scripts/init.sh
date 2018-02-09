@@ -15,7 +15,3 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | 
 #virtualenv
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip3 install virtualenv
-
-#reason
-npm install -g https://github.com/reasonml/reason-cli/archive/3.0.4-bin-linux.tar.gz
-
