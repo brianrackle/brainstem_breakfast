@@ -18,6 +18,6 @@ pip3 install virtualenv
 
 #go
 wget https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+echo $sudoPW | sudo -S sh -c 'printf "\nexport PATH=\$PATH:/usr/local/go/bin\n" >> /etc/profile'
 mkdir go
 mkdir go/src
