@@ -22,3 +22,6 @@ echo $sudoPW | sudo -S tar -C /usr/local -xzf go1.9.4.linux-amd64.tar.gz
 echo $sudoPW | sudo -S sh -c 'printf "\nexport PATH=\$PATH:/usr/local/go/bin\n" >> /etc/profile'
 mkdir go
 mkdir go/src
+
+# serverless
+npm install -g serverless
