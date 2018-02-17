@@ -23,5 +23,9 @@ echo $sudoPW | sudo -S sh -c 'printf "\nexport PATH=\$PATH:/usr/local/go/bin\n" 
 mkdir go
 mkdir go/src
 
+#go dep
+go get github.com/golang/dep/cmd/dep
+echo $sudoPW | sudo -S sh -c 'printf "\nexport PATH=$PATH:$HOME/go/bin\n" >> /etc/profile'
+
 # serverless
 npm install -g serverless
