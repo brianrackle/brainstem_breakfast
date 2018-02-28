@@ -9,6 +9,8 @@ echo $sudoPW | sudo -S apt update -y
 echo $sudoPW | sudo -S apt upgrade -y
 echo $sudoPW | sudo -S apt install -y gnome-tweak-tool gnome-shell-extensions gnome-session nodejs npm python3-dev libffi-dev libssl-dev update-manager terminator subversion emacs htop make g++ cmake git curl automake python3-pip sshuttle open-vm-tools open-vm-tools-desktop
 
+#sshuttle --dns -vr user@yourserver.com 0/0 --ssh-cmd 'ssh -i /your/key/path.pem'
+
 #nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
